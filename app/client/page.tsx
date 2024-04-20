@@ -32,10 +32,10 @@ export default function Page() {
             <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500" placeholder='name'{...register("name")} />
 
             <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 " placeholder="email" {...register("email")} />
-            {errors.email && <span>{errors.email.message}</span>}
+            {errors.email && <span  className="text-red-500 text-xs">{errors.email.message}</span>}
 
             <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 " placeholder="number phone" {...register("num")} />
-            {errors.num && <span>{errors.num.message}</span>}
+            {errors.num && <span className="text-red-500 text-xs" >{errors.num.message}</span>}
           </div>
 
 
