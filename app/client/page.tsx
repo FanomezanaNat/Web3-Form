@@ -18,7 +18,8 @@ type SignUpSchemaType = z.infer<typeof SignUpSchema>;
 
 export default function Page() {
   const { register, handleSubmit, formState: { errors } } = useForm<SignUpSchemaType>({ resolver: zodResolver(SignUpSchema) })
-  const onSubmit: SubmitHandler<SignUpSchemaType> = (data) => alert(JSON.stringify(data))
+  const onSubmit: SubmitHandler<SignUpSchemaType> = (data) => console.log(data);
+  
 
   return (
     <div className='flex min-h-screen items-center justify-center'>
